@@ -5,28 +5,31 @@ export default function Navbar() {
   return (
     <div className={styles.nav}>
     <div className={styles.menu}>
+    <div className={styles.headerLogo}>
     <img src="https://images.indianexpress.com/2021/01/myntra.png" 
-        alt="menu" />
-        <ul className={styles.list}>
-            <li>
-                MEN
-            </li>
-            <li>
-                WOMEN
-            </li>
-            <li>
-                KIDS
-            </li>
-            <li>
-                HOME AND LIVING
-            </li>
-            <li>
-                BEAUTY
-            </li>
-        </ul>
+        alt="menu" className='logo' />
     </div>
-    <div className={styles.search}>
-        <FaSearch className={styles.search_icon}/>
+        <div className={styles.categoryList}>
+            <div className={styles.category} >
+                MEN
+            </div>
+            <div className={styles.category}>
+                WOMEN
+            </div>
+            <div className={styles.category}>
+                KIDS
+            </div>
+            <div className={styles.category}>
+                HOME AND LIVING
+            </div>
+            <div className={styles.category}>
+                BEAUTY
+            </div>
+        </div>
+    </div>
+    <div className={styles.rightNav}>
+    <div className={styles.searchContainer}>
+        <FaSearch className={styles.searchIcon}/>
         <input type="text" placeholder="Search Products"
         //  onChange={ (e) => this.setState({searchProducts:e.target.value}) }
                 // onKeyPress={ (e) => this.handleSearch(e) }
@@ -34,21 +37,21 @@ export default function Navbar() {
     </div>
     <div className={styles.user}>
         <div className={styles.profile}>
-            <div><FaUser /></div>
+            <FaUser className={styles.reactIcons}/>
             <div className={styles.title}>Profile</div>
         </div>
         <div className={styles.wishlistIcon} >
-            <div><FaHeart /></div>
+            <FaHeart className={styles.reactIcons} />
             <div className={styles.title} >Wishlist</div>
         </div>
         <div className={styles.bagIcon}>
-            <div><FaShoppingBag /></div>
+            <FaShoppingBag className={styles.reactIcons}/>
             <div className={styles.title}>Bag</div>
         </div>
     </div>
-    <div className={styles.bars}>
+    </div>
+    {/* <div className={styles.bars}>
         <FaBars />
-        {
         
             <div className={styles.show_profile}>
                 <div>
@@ -60,8 +63,7 @@ export default function Navbar() {
                     <div className={styles.title}>Bag</div>
                 </div>
             </div>
-        }
-    </div>
+    </div> */}
 </div>
   )
 }

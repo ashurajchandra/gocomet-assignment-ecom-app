@@ -37,16 +37,16 @@ export default function Filter() {
     <section>
         <div >
         <p> <b>BRAND</b></p>
-        <input type="checkbox" name="brand" value="allen solly"
+        <input type="checkbox" name="brand" value="ColorPlus"
         //  onChange={ (e) => this.handleBrand(e) }
          ></input>
-        <label for="brand">Allen Solly</label>
+        <label for="brand">ColorPlus</label>
         </div>
         <div>
-        <input type="checkbox" name="brand" value="highlander" 
+        <input type="checkbox" name="brand" value="Mufti" 
         // onChange={ (e) => this.handleBrand(e) }
         ></input>
-        <label for="brand">Highlander</label>
+        <label for="brand">Mufti</label>
         </div>
         <div>
         <input type="checkbox" name="brand" value="roadster"
@@ -55,10 +55,10 @@ export default function Filter() {
         <label for="brand">Roadster</label>
         </div>
         <div>
-        <input type="checkbox" name="brand" value="louis philippe" 
+        <input type="checkbox" name="brand" value="Blackberrys" 
         // onChange={ (e) => this.handleBrand(e) }
         ></input>
-        <label for="brand">Louis Philippe</label>
+        <label for="brand">Blackberrys</label>
         </div>
     </section>
 
@@ -68,27 +68,57 @@ export default function Filter() {
         <input type="checkbox" name="price" value="low"
         //  onChange={ (e) => this.handlePrice(e) }
          ></input>
-        <label for="price">Rs.300 to Rs.3999</label>
+        <label for="price">Rs. 309 to Rs. 2232</label>
         </div>
         <div>
         <input type="checkbox" name="price" value="medium" 
         // onChange={ (e) => this.handlePrice(e) }
         ></input>
-        <label for="price">Rs.4000 to Rs.6999</label>
+        <label for="price">Rs. 2232 to Rs. 4155</label>
         </div>
         <div>
         <input type="checkbox" name="price" value="high"
         //  onChange={ (e) => this.handlePrice(e) }
          ></input>
-        <label for="price">Rs.7000 to Rs.9999</label>
+        <label for="price">Rs. 4155 to Rs. 6078</label>
         </div>
         <div>
         <input type="checkbox" name="price" value="higher"
         //  onChange={ (e) => this.handlePrice(e) }
          ></input>
-        <label for="price">Rs.10000 to Rs.13999</label>
+        <label for="price">Rs. 6078 to Rs. 8001</label>
         </div>
     </section>
+
+    <section>
+        <div>
+        <p><b> COLOR</b></p>
+        <input type="checkbox" name="color" value="blue"
+        //  onChange={ (e) => this.handlePrice(e) }
+         ></input>
+         <span className={styles.colorLabel}></span>
+        <label for="color">Blue</label>
+        </div>
+        <div>
+        <input type="checkbox" name="color" value="black" 
+        // onChange={ (e) => this.handlePrice(e) }
+        ></input>
+        <label for="color">Black</label>
+        </div>
+        <div>
+        <input type="checkbox" name="color" value="green"
+        //  onChange={ (e) => this.handlePrice(e) }
+         ></input>
+        <label for="color">Green</label>
+        </div>
+        <div>
+        <input type="checkbox" name="color" value="white"
+        //  onChange={ (e) => this.handlePrice(e) }
+         ></input>
+        <label for="color">White</label>
+        </div>
+    </section>
+   
     
 </div>
   )

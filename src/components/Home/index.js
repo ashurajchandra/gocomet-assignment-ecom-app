@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+import Product from "../Product"
 import Filter from "../Filter"
 import styles from "./Home.module.css"
+import data from "../../db.json";
 export default function Home() {
+ const [products, setProducts] = useState(data.products)
+ console.log("products",products)
   return (
     <main>
     <div className={styles.heading}>
@@ -62,21 +66,21 @@ export default function Home() {
     </div>
     <div className={styles.main}>
         <Filter />
-        {/* {renderProducts.length > 0 ? <div className="products_page">
+        {products.length > 0 ? <div className={styles.productsPage}>
             {
-                renderProducts.map(prod => <Product product={prod} key={prod.id} handleViewSimilar={this.handleViewSimilar} handleRemoveFromWishlist={this.handleRemoveFromWishlist} handleRemoveFromBag={this.handleRemoveFromBag}  /> )
+                products.map(prod => <Product product={prod} key={prod.id}  /> )
             }
         </div> : 
-        <div className="add_products">
-            <div className="add_products_title">
+        <div className="addProducts">
+            <div className={styles.addProductsTitle}>
                 <p>Nothing is Present, Please add products!</p>
             </div>
-            <button className="add-btn"
+            <button className={styles.addBtn}
             //  onClick={ () => this.handleNormalDisplay() }
              >ADD
             </button>
         </div> 
-        } */}
+        }
     </div>
 </main>
   )
